@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './GenerateButton.module.scss';
 
 export default function GenerateButton() {

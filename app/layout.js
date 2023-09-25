@@ -1,6 +1,7 @@
 import './globals.scss';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
+import DisplayLocalStorage from './DisplayLocalStorage';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,10 +15,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <nav>
-          <Link href="/">Home</Link>
-          <Link href="/animals">Animals</Link>
-          <Link href="/about">About</Link>
-          {Math.floor(Math.random() * 10)}
+          <div>
+            <Link href="/">Home</Link>
+            <Link href="/animals">Animals</Link>
+            <Link href="/about">About</Link>
+            {Math.floor(Math.random() * 10)}
+          </div>
+
+          <DisplayLocalStorage />
         </nav>
         {children}
       </body>
